@@ -1,3 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* prevent scrolling */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;       /* full viewport height */
+  background: #fff;
+  box-sizing: border-box;
+}
+
 .pomodoro-container {
 
     display: flex;
@@ -47,4 +63,36 @@
     background-color: rgba(37,99,235);
     color: rgba(255, 255, 255, 0.909);
     border-radius: 20px;
+}
+
+
+/* footer: music playlist */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightgray;
+  background: #f6f7f9;  /* optional */
+  padding: .25rem;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+audio {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+/* Chrome / Edge / Safari (WebKit/Blink) – remove panel background */
+audio::-webkit-media-controls-enclosure {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+audio::-webkit-media-controls-panel {
+  background: transparent !important;
+  box-shadow: none !important;
 }

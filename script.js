@@ -17,17 +17,31 @@ function startTimer() {
   // (20*60) = total of seconds of 20 minutes
   // number of seconds
 
+  // Runs the code inside every 1second
+  //It returns an ID (intervalId)
+  // If we have reached 0seconds, then stop the loop
   intervalId = setInterval(() => {
     if (totalSeconds <= 0) {
       clearInterval(intervalId);
       intervalId = null;
       return;
     }
-
-    totalSeconds--;
-    const m = Math.floor(totalSeconds / 60);
-    const s = totalSeconds % 60;
+   
+    totalSeconds--; //If we are above 0 seconds, substract one second.
+    // Convert total seconds into munutes + seconds
+    const m = Math.floor(totalSeconds / 60); // full minutes
+    const s = totalSeconds % 60; // remainder seconds
     countdownElement.textContent =
       `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
   }, 1000);
+
+  //Pad start ensures the string is at least 2 character longs, padding with 0 if is shorter
+
+  //String(5).padStart(2, "0") // "05"
+  // String(12).padStart(2, "0") // "12"
+  
+  // This way it looks like MM : SS
+
+
+
 }
