@@ -1,0 +1,50 @@
+.pomodoro-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pomodoro-container-child {
+    width: 240px;
+    height: 300px;
+    /* background: lightblue; */
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    
+    border-radius: 50%;
+    border: 10px solid rgba(37,99,235);
+    background-color: white;
+    
+}
+
+.countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    color: rgba(37,99,235) 
+}
+
+.button-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+
+.start-timer {
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(37,99,235);
+    color: rgba(255, 255, 255, 0.909);
+    border-radius: 20px;
+}
